@@ -5,7 +5,7 @@ import Hero from './components/Hero';
 import BackgroundDecorations from './components/BackgroundDecorations';
 import Skills from './components/Skills';
 import AboutMe from './components/AboutMe';
-import Projects from './components/Projects';
+import Projects from './components/Project';
 import Experience from './components/Experience';
 import Contacts from './components/Contact';
 
