@@ -1,16 +1,7 @@
 
 import React from 'react';
 
-const ExpertiseLabel: React.FC<{ label: string }> = ({ label }) => {
-    return (
-        <div className="flex flex-col items-center gap-2 group cursor-default">
-            <div className="h-[1px] w-8 bg-[#2ecc71]/30 group-hover:w-16 group-hover:bg-[#2ecc71] transition-all duration-500 mb-2"></div>
-            <span className="text-[10px] md:text-xs font-black uppercase tracking-[0.3em] text-black/40 dark:text-white/60 group-hover:text-black dark:group-hover:text-white transition-colors text-center">
-                {label}
-            </span>
-        </div>
-    );
-};
+
 
 const AboutMe: React.FC = () => {
     return (
@@ -86,13 +77,7 @@ const AboutMe: React.FC = () => {
                     </div>
                 </div>
 
-                {/* Expertise Grid */}
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4 py-16 border-t border-black/5 dark:border-white/10 mt-12">
-                    <ExpertiseLabel label="Full-Stack Dev" />
-                    <ExpertiseLabel label="UI & UX Design" />
-                    <ExpertiseLabel label="System Arch" />
-                    <ExpertiseLabel label="Cloud Solutions" />
-                </div>
+
             </div>
         </section>
     );
