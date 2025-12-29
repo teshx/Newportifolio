@@ -8,6 +8,9 @@ import AboutMe from './components/AboutMe';
 import Projects from './components/Project';
 import Experience from './components/Experience';
 import Contacts from './components/Contact';
+import Articles from './components/Articles';
+import ScrollToTop from './components/ScrollToTop';
+import Footer from './components/Footer';
 
 const App: React.FC = () => {
   return (
@@ -31,16 +34,7 @@ const App: React.FC = () => {
 
       </main>
 
-      <footer className="relative z-10 py-16 px-10 border-t border-black/5 dark:border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 bg-white/50 dark:bg-transparent transition-colors">
-        <div className="text-black/20 dark:text-white/20 text-[10px] uppercase tracking-[0.4em]">
-          &copy; 2024 Teshager Habtie • Portfolio
-        </div>
-        <div className="flex gap-8 text-black/20 dark:text-white/20 text-[10px] uppercase tracking-[0.2em] font-bold">
-          <a href="#" className="hover:text-black dark:hover:text-white transition-colors">Resume</a>
-          <a href="#" className="hover:text-black dark:hover:text-white transition-colors">Privacy</a>
-          <a href="#" className="hover:text-black dark:hover:text-white transition-colors">Cookies</a>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };
