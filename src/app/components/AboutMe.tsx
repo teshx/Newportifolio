@@ -28,15 +28,6 @@ const AboutMe: React.FC = () => {
                         <p className="text-sm md:text-base text-black/60 dark:text-white/50 leading-relaxed font-light max-w-xl">
                             I specialize in developing high-performance full-stack applications that help companies scale their digital footprint. By combining modern engineering practices with an eye for detailed product design, I bridge the gap between complex technical requirements and intuitive user experiences.
                         </p>
-
-                        <div className="pt-6">
-                            <button className="group relative px-10 py-4 bg-[#2ecc71] overflow-hidden transition-all hover:pr-14 active:scale-95 shadow-lg shadow-[#2ecc71]/20 rounded-sm">
-                                <span className="relative z-10 text-black font-black uppercase tracking-widest text-xs">
-                                    Learn More
-                                </span>
-                                <i className="fas fa-arrow-right absolute right-4 top-1/2 -translate-y-1/2 text-black opacity-0 group-hover:opacity-100 transition-all"></i>
-                            </button>
-                        </div>
                     </div>
 
                     {/* Right Side: Profile Photo */}
@@ -44,12 +35,14 @@ const AboutMe: React.FC = () => {
 
                         {/* Image Container - Stripped of box styling */}
                         <div className="relative w-full max-w-[300px] aspect-[4/5] transition-all duration-700 ease-in-out group flex items-center justify-center">
+                            {/* Decorative Background for Light Mode */}
+                            <div className="absolute inset-0 bg-zinc-100 dark:bg-white/5 rounded-3xl -rotate-3 transition-transform group-hover:rotate-0 duration-700"></div>
 
                             {/* Profile Image */}
                             <img
-                                src="https://images.unsplash.com/photo-1552058544-f2b08422138a?w=800&q=80"
+                                src="/TESHX.jpg"
                                 alt="Profile Photo"
-                                className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-105 rounded-3xl "
+                                className="relative w-full h-full object-cover transition-all duration-1000 group-hover:scale-105 rounded-3xl shadow-2xl dark:shadow-none border border-zinc-200 dark:border-white/10"
                             />
 
                             {/* The "Fullstack Developer" Badge - Kept but simplified and floating */}

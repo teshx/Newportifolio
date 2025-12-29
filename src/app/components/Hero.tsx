@@ -22,9 +22,9 @@ const Hero: React.FC = () => {
                             <div className="absolute inset-0 bg-purple-500 rounded-full blur-xl opacity-20 group-hover:opacity-40 transition-opacity"></div>
                             <div className="relative w-16 h-16 md:w-28 md:h-28 rounded-full overflow-hidden border-2 border-black/10 dark:border-white/10 float">
                                 <img
-                                    src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=200&h=200&auto=format&fit=crop"
+                                    src="/TESHX.png"
                                     alt="Teshager Habtie"
-                                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                                    className="w-full h-full object-cover transition-all duration-500"
                                 />
                             </div>
                         </div>
