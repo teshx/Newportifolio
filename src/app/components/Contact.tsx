@@ -47,6 +47,58 @@ const ContactInfoItem: React.FC<{
 };
 
 const Contact: React.FC = () => {
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        message: '',
+    });
+
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [status, setStatus] = useState<{
+        type: 'success' | 'error' | null;
+        message: string;
+    }>({ type: null, message: '' });
+
+    const handleChange = (
+        e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    ) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value });
+    };
+
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        setIsSubmitting(true);
+        setStatus({ type: null, message: '' });
+
+        try {
+            const response = await fetch('/api/contact', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData),
+            });
+
+            const data = await response.json();
+
+            if (!response.ok) {
+                throw new Error(data.error || 'Failed to send');
+            }
+
+            setStatus({
+                type: 'success',
+                message: 'Message sent successfully! I will get back to you soon.',
+            });
+
+            setFormData({ name: '', email: '', message: '' });
+        } catch (err) {
+            setStatus({
+                type: 'error',
+                message: 'Something went wrong. Please try again later.',
+            });
+        } finally {
+            setIsSubmitting(false);
+        }
+    };
+
     return (
         <section id="contact" className="py-24 px-[10vw] lg:px-[15vw] bg-transparent border-t border-black/5 dark:border-white/5">
             <div className="max-w-7xl mx-auto">
@@ -91,29 +143,58 @@ const Contact: React.FC = () => {
                     </div>
 
                     {/* Right Side: Contact Form */}
-                    <div className="space-y-6">
+                    <form onSubmit={handleSubmit} className="space-y-6">
                         <div className="space-y-4">
                             <input
                                 type="text"
+                                name="name"
+                                value={formData.name}
+                                onChange={handleChange}
                                 placeholder="Your Name"
-                                className="w-full bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-xl px-6 py-4 text-black dark:text-white text-sm focus:outline-none focus:border-[#2ecc71] transition-all placeholder:text-black/30 dark:placeholder:text-white/20"
+                                disabled={isSubmitting}
+                                required
+                                className="w-full bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-xl px-6 py-4 text-black dark:text-white text-sm focus:outline-none focus:border-[#2ecc71] transition-all placeholder:text-black/30 dark:placeholder:text-white/20 disabled:opacity-50"
                             />
                             <input
                                 type="email"
+                                name="email"
+                                value={formData.email}
+                                onChange={handleChange}
                                 placeholder="Your Email"
-                                className="w-full bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-xl px-6 py-4 text-black dark:text-white text-sm focus:outline-none focus:border-[#2ecc71] transition-all placeholder:text-black/30 dark:placeholder:text-white/20"
+                                disabled={isSubmitting}
+                                required
+                                className="w-full bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-xl px-6 py-4 text-black dark:text-white text-sm focus:outline-none focus:border-[#2ecc71] transition-all placeholder:text-black/30 dark:placeholder:text-white/20 disabled:opacity-50"
                             />
                             <textarea
+                                name="message"
+                                value={formData.message}
+                                onChange={handleChange}
                                 placeholder="Tell me about your project..."
                                 rows={5}
-                                className="w-full bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-xl px-6 py-4 text-black dark:text-white text-sm focus:outline-none focus:border-[#2ecc71] transition-all placeholder:text-black/30 dark:placeholder:text-white/20 resize-none"
+                                disabled={isSubmitting}
+                                required
+                                className="w-full bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-xl px-6 py-4 text-black dark:text-white text-sm focus:outline-none focus:border-[#2ecc71] transition-all placeholder:text-black/30 dark:placeholder:text-white/20 resize-none disabled:opacity-50"
                             ></textarea>
                         </div>
 
-                        <button className="w-full py-5 bg-black dark:bg-[#d1d5db] hover:bg-zinc-800 dark:hover:bg-white text-white dark:text-black font-black uppercase tracking-widest text-xs rounded-full transition-all transform active:scale-[0.98] shadow-2xl">
-                            Start a Project
+                        {/* Status Messages */}
+                        {status.type && (
+                            <div className={`p-4 rounded-xl text-sm font-medium ${status.type === 'success'
+                                    ? 'bg-[#2ecc71]/10 text-[#2ecc71] border border-[#2ecc71]/20'
+                                    : 'bg-red-500/10 text-red-500 border border-red-500/20'
+                                }`}>
+                                {status.message}
+                            </div>
+                        )}
+
+                        <button
+                            type="submit"
+                            disabled={isSubmitting}
+                            className="w-full py-5 bg-black dark:bg-[#d1d5db] hover:bg-zinc-800 dark:hover:bg-white text-white dark:text-black font-black uppercase tracking-widest text-xs rounded-full transition-all transform active:scale-[0.98] shadow-2xl disabled:opacity-50 disabled:cursor-not-allowed"
+                        >
+                            {isSubmitting ? 'Sending...' : 'Start a Project'}
                         </button>
-                    </div>
+                    </form>
 
                 </div>
             </div>
