@@ -74,58 +74,58 @@ const ProjectCard: React.FC<{ project: ProjectItem }> = ({ project }) => {
 const Projects: React.FC = () => {
     const projects: ProjectItem[] = [
         {
-            id: 'the-garden',
-            title: 'The Garden',
-            description: 'Building an ecosystem dedicated to grow, share and highlight developer talents through collaborative tools.',
-            imageUrl: 'https://images.unsplash.com/photo-1614850523296-d8c1af93d400?w=800&q=80',
+            id: 'amazon-clone',
+            title: 'Amazon-clone',
+            description: 'Full-stack e-commerce platform with user authentication, product catalog, and shopping cart functionality.',
+            imageUrl: 'https://images.unsplash.com/photo-1523474253046-8cd2748b5fd2?w=800&q=80',
             liveUrl: '#',
             githubUrl: '#',
-            tags: ['Svelte', 'Typescript', 'Express', 'AWS', 'Redis']
+            tags: ['React', 'Express', 'Node', 'Firebase']
         },
         {
-            id: 'odit-et',
-            title: 'odit.et',
-            description: 'Automated finance auditing system that parses SMS notifications using advanced NLP algorithms.',
-            imageUrl: 'https://images.unsplash.com/photo-1551288049-bbbda536339a?w=800&q=80',
+            id: 'netflix-clone',
+            title: 'Netflix-clone',
+            description: 'Streaming platform interface with movie browsing, search functionality, and responsive design.',
+            imageUrl: 'https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?w=800&q=80',
             liveUrl: '#',
             githubUrl: '#',
-            tags: ['SASS', 'Fullstack', 'NLP', 'DataViz']
+            tags: ['React']
         },
         {
-            id: 'csa-page-scrape',
-            title: 'Csa page scrape',
-            description: 'A massive automated Python scraping engine that processed over 5000 subpages of technical articles.',
-            imageUrl: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80',
+            id: 'iphone-clone-1',
+            title: 'iPhone-clone',
+            description: 'This is a project made to learn the latest languages by building an app.',
+            imageUrl: 'https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?w=800&q=80',
             liveUrl: '#',
             githubUrl: '#',
-            tags: ['Selenium', 'Python', 'Data-Mining', 'IOT']
+            tags: ['HTML', 'CSS', 'JavaScript', 'Bootstrap']
         },
         {
-            id: 'fintech-pulse',
-            title: 'Fintech Pulse',
-            description: 'Real-time dashboard for cryptocurrency market analysis and portfolio tracking with high-frequency updates.',
-            imageUrl: 'https://images.unsplash.com/photo-1642790103517-130f9a2ba393?w=800&q=80',
+            id: 'iphone-clone-2',
+            title: 'iPhone-clone',
+            description: 'Modern iPhone landing page clone built with React and custom CSS styling.',
+            imageUrl: 'https://images.unsplash.com/photo-1556656793-08538906a9f8?w=800&q=80',
             liveUrl: '#',
             githubUrl: '#',
-            tags: ['React', 'Next.js', 'WebSockets', 'Chart.js']
+            tags: ['React', 'CSS']
         },
         {
-            id: 'ai-content-engine',
-            title: 'AI Content Engine',
-            description: 'SaaS platform leveraging Gemini API for automated marketing copy and smart social scheduling.',
-            imageUrl: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80',
+            id: 'auth-system',
+            title: 'Auth',
+            description: 'Complete authentication system with user registration, login, and session management.',
+            imageUrl: 'https://images.unsplash.com/photo-1555421689-491a97ff2040?w=800&q=80',
             liveUrl: '#',
             githubUrl: '#',
-            tags: ['Node.js', 'Gemini API', 'PostgreSQL', 'Prisma']
+            tags: ['React', 'Express', 'Node', 'MongoDB']
         },
         {
-            id: 'nexus-logistics',
-            title: 'Nexus Logistics',
-            description: 'Enterprise supply chain tracker featuring geofencing and automated inventory management workflows.',
-            imageUrl: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&q=80',
+            id: 'library-management',
+            title: 'Library Management System',
+            description: 'Full-featured library management system with book cataloging, member management, and borrowing tracking.',
+            imageUrl: 'https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=800&q=80',
             liveUrl: '#',
             githubUrl: '#',
-            tags: ['Docker', 'Microservices', 'MongoDB', 'Firebase']
+            tags: ['HTML', 'MySQL', 'PHP', 'JavaScript']
         }
     ];
 
