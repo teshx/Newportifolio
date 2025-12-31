@@ -108,7 +108,7 @@ const Contact: React.FC = () => {
                         Let's Work Together
                     </h2>
                     <p className="text-black/40 dark:text-white/40 text-sm md:text-base leading-relaxed font-light">
-                        Ready to bring your ideas to life? I'm available for freelance projects and full-time opportunities. Let's discuss how we can collaborate.
+                        I'm available for freelance projects and full-time opportunities. Let's discuss how we can collaborate.
                     </p>
                 </div>
 
@@ -169,7 +169,7 @@ const Contact: React.FC = () => {
                                 name="message"
                                 value={formData.message}
                                 onChange={handleChange}
-                                placeholder="Tell me about your project..."
+                                placeholder="message...."
                                 rows={5}
                                 disabled={isSubmitting}
                                 required
