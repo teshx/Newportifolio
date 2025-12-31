@@ -46,10 +46,12 @@ const Navbar: React.FC = () => {
 
             {/* Main Pill Nav in Middle */}
             <nav className="hidden md:flex px-8 py-3 bg-zinc-100/40 dark:bg-zinc-900/60 backdrop-blur-xl border border-black/5 dark:border-white/5 rounded-full items-center gap-10 shadow-sm dark:shadow-none">
-                <a href="#about" className="text-xs font-bold uppercase tracking-widest text-black/40 dark:text-white/40 hover:text-black dark:hover:text-white transition-all">About</a>
-                <a href="#articles" className="text-xs font-bold uppercase tracking-widest text-black/40 dark:text-white/40 hover:text-black dark:hover:text-white transition-all">Articles</a>
-                <a href="#projects" className="text-xs font-bold uppercase tracking-widest text-black/40 dark:text-white/40 hover:text-black dark:hover:text-white transition-all">Projects</a>
-                <a href="#careers" className="text-xs font-bold uppercase tracking-widest text-black/40 dark:text-white/40 hover:text-black dark:hover:text-white transition-all">Careers</a>
+                <a href="#home" className="text-[10px] font-bold uppercase tracking-widest text-black/40 dark:text-white/40 hover:text-black dark:hover:text-white transition-all">Home</a>
+                <a href="#skill" className="text-[10px] font-bold uppercase tracking-widest text-black/40 dark:text-white/40 hover:text-black dark:hover:text-white transition-all">Skill</a>
+                <a href="#aboutme" className="text-[10px] font-bold uppercase tracking-widest text-black/40 dark:text-white/40 hover:text-black dark:hover:text-white transition-all">AboutMe</a>
+                <a href="#service" className="text-[10px] font-bold uppercase tracking-widest text-black/40 dark:text-white/40 hover:text-black dark:hover:text-white transition-all">Service</a>
+                <a href="#project" className="text-[10px] font-bold uppercase tracking-widest text-black/40 dark:text-white/40 hover:text-black dark:hover:text-white transition-all">Project</a>
+                <a href="#contact" className="text-[10px] font-bold uppercase tracking-widest text-black/40 dark:text-white/40 hover:text-black dark:hover:text-white transition-all">Contact</a>
             </nav>
 
             {/* Theme Switcher on the Right */}

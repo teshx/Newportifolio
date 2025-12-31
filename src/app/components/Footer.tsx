@@ -15,13 +15,16 @@ const Footer: React.FC = () => {
 
             <div className="max-w-7xl mx-auto w-full relative z-10 flex flex-col md:flex-row justify-between items-center gap-6">
                 <div className="text-black/60 dark:text-white/30 text-[10px] uppercase tracking-[0.2em] font-medium text-center md:text-left">
-                    &copy; 2024 Teshager Habtie • Portfolio
+                    &copy; 2026 Teshager Habtie • Portfolio
                 </div>
 
                 <div className="flex gap-8 text-black/60 dark:text-white/30 text-[10px] uppercase tracking-[0.2em] font-bold">
-                    <a href="#" className="hover:text-black dark:hover:text-white transition-colors">Resume</a>
-                    <a href="#" className="hover:text-black dark:hover:text-white transition-colors">Privacy</a>
-                    <a href="#" className="hover:text-black dark:hover:text-white transition-colors">Cookies</a>
+                    <a href="#home" className="hover:text-black dark:hover:text-white transition-colors">Home</a>
+                    <a href="#skill" className="hover:text-black dark:hover:text-white transition-colors">Skill</a>
+                    <a href="#aboutme" className="hover:text-black dark:hover:text-white transition-colors">AboutMe</a>
+                    <a href="#service" className="hover:text-black dark:hover:text-white transition-colors">Service</a>
+                    <a href="#project" className="hover:text-black dark:hover:text-white transition-colors">Project</a>
+                    <a href="#contact" className="hover:text-black dark:hover:text-white transition-colors">Contact</a>
                 </div>
             </div>
         </footer>
