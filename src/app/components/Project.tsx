@@ -77,25 +77,25 @@ const Projects: React.FC = () => {
             id: 'amazon-clone',
             title: 'Amazon-clone',
             description: 'Full-stack e-commerce platform with user authentication, product catalog, and shopping cart functionality.',
-            imageUrl: 'https://images.unsplash.com/photo-1523474253046-8cd2748b5fd2?w=800&q=80',
-            liveUrl: '#',
-            githubUrl: '#',
+            imageUrl: '/Amazone-clone-1Z4w36d5.png',
+            liveUrl: 'https://teshx-funny-toffee-d3ea20.netlify.app/',
+            githubUrl: 'https://github.com/teshx/Amazon-clone/',
             tags: ['React', 'Express', 'Node', 'Firebase']
         },
         {
             id: 'netflix-clone',
             title: 'Netflix-clone',
             description: 'Streaming platform interface with movie browsing, search functionality, and responsive design.',
-            imageUrl: 'https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?w=800&q=80',
-            liveUrl: '#',
-            githubUrl: '#',
+            imageUrl: '/netflix-clone-B5KCDRi6.jpg',
+            liveUrl: 'https://teshx-nstirring-fudge-138dc3.netlify.app/',
+            githubUrl: 'https://github.com/teshx/Netflix-Clone',
             tags: ['React']
         },
         {
             id: 'iphone-clone-1',
             title: 'iPhone-clone',
             description: 'This is a project made to learn the latest languages by building an app.',
-            imageUrl: 'https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?w=800&q=80',
+            imageUrl: '/iphone-bootstrap-aXG85nJe.png',
             liveUrl: '#',
             githubUrl: '#',
             tags: ['HTML', 'CSS', 'JavaScript', 'Bootstrap']
@@ -104,7 +104,7 @@ const Projects: React.FC = () => {
             id: 'iphone-clone-2',
             title: 'iPhone-clone',
             description: 'Modern iPhone landing page clone built with React and custom CSS styling.',
-            imageUrl: 'https://images.unsplash.com/photo-1556656793-08538906a9f8?w=800&q=80',
+            imageUrl: '/iphone-react-CbF-vJ1U.png',
             liveUrl: '#',
             githubUrl: '#',
             tags: ['React', 'CSS']
@@ -113,24 +113,24 @@ const Projects: React.FC = () => {
             id: 'auth-system',
             title: 'Auth',
             description: 'Complete authentication system with user registration, login, and session management.',
-            imageUrl: 'https://images.unsplash.com/photo-1555421689-491a97ff2040?w=800&q=80',
+            imageUrl: '/Auth-coipgMli.png',
             liveUrl: '#',
-            githubUrl: '#',
+            githubUrl: 'https://github.com/teshx/Auth',
             tags: ['React', 'Express', 'Node', 'MongoDB']
         },
         {
             id: 'library-management',
             title: 'Library Management System',
             description: 'Full-featured library management system with book cataloging, member management, and borrowing tracking.',
-            imageUrl: 'https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=800&q=80',
+            imageUrl: '/lms-DM6EQrTJ.png',
             liveUrl: '#',
-            githubUrl: '#',
+            githubUrl: 'https://github.com/teshx/Learning-PHP/tree/main/New-online-liberary-management-system',
             tags: ['HTML', 'MySQL', 'PHP', 'JavaScript']
         }
     ];
 
     return (
-        <section id="projects" className="py-24 px-[10vw] lg:px-[15vw] bg-transparent border-t border-black/5 dark:border-white/5">
+        <section id="project" className="py-24 px-[10vw] lg:px-[15vw] bg-transparent border-t border-black/5 dark:border-white/5">
             <div className="max-w-7xl mx-auto">
                 {/* Section Header */}
                 <div className="text-center mb-16 space-y-4">
