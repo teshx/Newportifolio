@@ -5,7 +5,7 @@ import React from 'react';
 
 const AboutMe: React.FC = () => {
     return (
-        <section id="about-me" className="py-24 px-[5vw] md:px-[10vw] relative bg-transparent overflow-hidden border-t border-black/5 dark:border-white/5">
+        <section id="aboutme" className="py-24 px-[5vw] md:px-[10vw] relative bg-transparent overflow-hidden border-t border-black/5 dark:border-white/5">
             {/* Local Background Glow */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full pointer-events-none z-0">
                 <div className="absolute inset-0 bg-gradient-to-tr from-[#2ecc71]/5 via-transparent to-blue-500/5 blur-[120px] opacity-50"></div>
@@ -26,7 +26,7 @@ const AboutMe: React.FC = () => {
                         </div>
 
                         <p className="text-sm md:text-base text-black/60 dark:text-white/50 leading-relaxed font-light max-w-xl">
-                            I specialize in developing high-performance full-stack applications that help companies scale their digital footprint. By combining modern engineering practices with an eye for detailed product design, I bridge the gap between complex technical requirements and intuitive user experiences.
+                            I am a motivated software engineer, always eager to take on new challenges. As a fast learner, I can learn new technologies quickly and adapt easily. With a strong passion for learning, a positive attitude, and a growth mindset, I am dedicated to delivering high-quality results and ready to make a meaningful contribution and achieve great things.
                         </p>
                     </div>
 
