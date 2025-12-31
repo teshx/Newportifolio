@@ -17,9 +17,9 @@ interface ServiceItem {
 const Experience: React.FC = () => {
     const experiences: ExperienceItem[] = [
         {
-            role: "Senior Full-Stack Engineer",
-            company: "TechGlobal Systems",
-            period: "2022 - PRESENT",
+            role: "Full-Stack Engineer",
+            company: "AFRONEX TECH HUB",
+            period: "2024 - PRESENT",
             description: "Leading the development of cloud-native architectures and scaling high-traffic fintech applications using React and Node.js."
         },
         {
