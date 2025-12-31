@@ -56,6 +56,7 @@ const Skills: React.FC = () => {
         { label: "TypeScript", color: "#3178C6", icon: <i className="fab fa-js-square"></i>, },
         { label: "React", color: "#61DAFB", icon: <i className="fab fa-react"></i>, },
         { label: "Next.js", color: "#000000", icon: <svg viewBox="0 0 180 180" width="1em" height="1em" fill="currentColor"><mask id="mask0_408_134" style={{ maskType: 'alpha' }} maskUnits="userSpaceOnUse" x="0" y="0" width="180" height="180"><circle cx="90" cy="90" r="90" fill="black" /></mask><g mask="url(#mask0_408_134)"><circle cx="90" cy="90" r="90" fill="black" /><path d="M149.508 157.52L69.142 54H54V125.97H66.1136V69.3836L139.999 164.845C143.333 162.614 146.509 160.165 149.508 157.52Z" fill="white" /><rect x="115" y="54" width="12" height="72" fill="white" /></g></svg>, },
+        { label: "Prisma", color: "#2D3748", icon: <img src="/prisma.svg" alt="Prisma" className="w-[1.2em] h-[1.2em] object-contain invert dark:invert-0" />, },
         { label: "Better Auth", color: "#5E6AD2", icon: <img src="/better-auth.jpg" alt="Better Auth" className="w-[1em] h-[1em] object-contain invert dark:invert-0" />, },
         { label: "Tailwind CSS", color: "#06B6D4", icon: <i className="fab fa-css3"></i>, },
         { label: "Node.js", color: "#339933", icon: <i className="fab fa-node-js"></i>, },
@@ -74,7 +75,7 @@ const Skills: React.FC = () => {
     ];
 
     return (
-        <section id="about" className="py-32 px-[5vw] md:px-[10vw] flex flex-col items-center">
+        <section id="skill" className="py-32 px-[5vw] md:px-[10vw] flex flex-col items-center">
             {/* Title Header */}
             <div className="mb-10 text-center">
                 <h2 className="text-3xl md:text-5xl font-black tracking-tighter uppercase mb-4 dark:text-white text-zinc-900">Technical Stack</h2>

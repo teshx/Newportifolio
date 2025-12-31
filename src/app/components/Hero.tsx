@@ -4,7 +4,7 @@ import SocialLinks from './SocialLinks';
 
 const Hero: React.FC = () => {
     return (
-        <section className="relative min-h-screen flex flex-col items-center justify-center px-6 pt-20">
+        <section id="home" className="relative min-h-screen flex flex-col items-center justify-center px-6 pt-20">
             <div className="max-w-5xl w-full text-center">
                 {/* Top Tag */}
                 <div className="mb-8 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-400/10 dark:bg-white/5 border border-black/5 dark:border-white/10 backdrop-blur-sm animate-fade-in">
@@ -60,12 +60,12 @@ const Hero: React.FC = () => {
             </div>
 
             {/* Single Contact Button */}
-            <button className="relative group px-10 py-4 bg-transparent border border-black/10 dark:border-white/10 rounded-xl overflow-hidden transition-all duration-300 active:scale-95">
+            <a href="#contact" className="relative group px-10 py-4 bg-transparent border border-black/10 dark:border-white/10 rounded-xl overflow-hidden transition-all duration-300 active:scale-95">
                 <div className="absolute inset-0 bg-black dark:bg-white translate-y-[101%] group-hover:translate-y-0 transition-transform duration-300"></div>
                 <span className="relative z-10 font-black uppercase tracking-widest text-sm text-black dark:text-white group-hover:text-white dark:group-hover:text-black transition-colors">
                     Contact Me
                 </span>
-            </button>
+            </a>
         </section>
     );
 };

@@ -125,13 +125,13 @@ const Contact: React.FC = () => {
                         <ContactInfoItem
                             icon="fas fa-phone-alt"
                             title="Phone"
-                            detail="+252968476662"
+                            detail="+251968476662"
                             copyable={true}
                         />
                         <ContactInfoItem
                             icon="fab fa-telegram-plane"
                             title="Telegram"
-                            detail="@teshie_dev"
+                            detail="@teshx1"
                             copyable={true}
                         />
                         <ContactInfoItem
@@ -180,8 +180,8 @@ const Contact: React.FC = () => {
                         {/* Status Messages */}
                         {status.type && (
                             <div className={`p-4 rounded-xl text-sm font-medium ${status.type === 'success'
-                                    ? 'bg-[#2ecc71]/10 text-[#2ecc71] border border-[#2ecc71]/20'
-                                    : 'bg-red-500/10 text-red-500 border border-red-500/20'
+                                ? 'bg-[#2ecc71]/10 text-[#2ecc71] border border-[#2ecc71]/20'
+                                : 'bg-red-500/10 text-red-500 border border-red-500/20'
                                 }`}>
                                 {status.message}
                             </div>

@@ -5,11 +5,9 @@ import Hero from './components/Hero';
 import BackgroundDecorations from './components/BackgroundDecorations';
 import Skills from './components/Skills';
 import AboutMe from './components/AboutMe';
-import Projects from './components/Project';
+import Project from './components/Project';
 import Experience from './components/Experience';
 import Contacts from './components/Contact';
-import Articles from './components/Articles';
-import ScrollToTop from './components/ScrollToTop';
 import Footer from './components/Footer';
 
 const App: React.FC = () => {
@@ -29,7 +27,7 @@ const App: React.FC = () => {
         {/* About Me Section */}
         <AboutMe />
         <Experience />
-        <Projects />
+        <Project />
         <Contacts />
 
       </main>
