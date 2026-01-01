@@ -1,7 +1,7 @@
+"use client";
 
 import React from 'react';
-
-
+import { motion } from 'framer-motion';
 
 const AboutMe: React.FC = () => {
     return (
@@ -15,7 +15,12 @@ const AboutMe: React.FC = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-2 lg:gap-8 items-center mb-24">
 
                     {/* Left Side: Content */}
-                    <div className="flex flex-col gap-6 text-left order-2 md:order-1">
+                    <motion.div
+                        initial={{ opacity: 0, x: -50 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.8, ease: "easeOut" }}
+                        className="flex flex-col gap-6 text-left order-2 md:order-1"
+                    >
                         <div className="space-y-4">
                             <span className="inline-block text-[#2ecc71] text-xs font-black uppercase tracking-[0.4em] mb-2 border-l-2 border-[#2ecc71] pl-4">About Me</span>
                             <h2 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tighter uppercase leading-[0.95] text-black dark:text-white">
@@ -28,10 +33,15 @@ const AboutMe: React.FC = () => {
                         <p className="text-sm md:text-base text-black/60 dark:text-white/50 leading-relaxed font-light max-w-xl">
                             I am a motivated software engineer, always eager to take on new challenges. As a fast learner, I can learn new technologies quickly and adapt easily. With a strong passion for learning, a positive attitude, and a growth mindset, I am dedicated to delivering high-quality results and ready to make a meaningful contribution and achieve great things.
                         </p>
-                    </div>
+                    </motion.div>
 
                     {/* Right Side: Profile Photo */}
-                    <div className="relative order-1 md:order-2 group flex justify-center items-center py-10">
+                    <motion.div
+                        initial={{ opacity: 0, x: 50 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.8, ease: "easeOut" }}
+                        className="relative order-1 md:order-2 group flex justify-center items-center py-10"
+                    >
 
                         {/* Image Container - Stripped of box styling */}
                         <div className="relative w-full max-w-[300px] aspect-[4/5] transition-all duration-700 ease-in-out group flex items-center justify-center">
@@ -60,17 +70,18 @@ const AboutMe: React.FC = () => {
                         {/* Background Floating Rings - Slightly smaller, decorative only */}
                         <div className="absolute -top-12 -right-12 w-64 h-64 opacity-[0.03] dark:opacity-[0.1] pointer-events-none group-hover:scale-110 transition-transform duration-1000">
                             {[...Array(5)].map((_, i) => (
-                                <div
+                                <motion.div
                                     key={i}
+                                    initial={{ scale: 0, opacity: 0 }}
+                                    whileInView={{ scale: 1, opacity: 1 }}
+                                    transition={{ delay: i * 0.1, duration: 0.5 }}
                                     className="absolute inset-0 border border-[#2ecc71] rounded-full"
-                                    style={{ transform: `scale(${1 + i * 0.3})` }}
+                                    style={{ scale: 1 + i * 0.3 }}
                                 />
                             ))}
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
-
-
             </div>
         </section>
     );
