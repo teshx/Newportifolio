@@ -18,7 +18,7 @@ const Footer: React.FC = () => {
                     &copy; 2026 Teshager Habtie • Portfolio
                 </div>
 
-                <div className="flex gap-8 text-black/60 dark:text-white/30 text-[10px] uppercase tracking-[0.2em] font-bold">
+                <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8 text-black/60 dark:text-white/30 text-[10px] uppercase tracking-[0.2em] font-bold text-center">
                     <a href="#home" className="hover:text-black dark:hover:text-white transition-colors">Home</a>
                     <a href="#skill" className="hover:text-black dark:hover:text-white transition-colors">Skill</a>
                     <a href="#aboutme" className="hover:text-black dark:hover:text-white transition-colors">AboutMe</a>
