@@ -192,7 +192,7 @@ const Contact: React.FC = () => {
                             disabled={isSubmitting}
                             className="w-full py-5 bg-black dark:bg-[#d1d5db] hover:bg-zinc-800 dark:hover:bg-white text-white dark:text-black font-black uppercase tracking-widest text-xs rounded-full transition-all transform active:scale-[0.98] shadow-2xl disabled:opacity-50 disabled:cursor-not-allowed"
                         >
-                            {isSubmitting ? 'Sending...' : 'Start a Project'}
+                            {isSubmitting ? 'Sending...' : 'Send Message'}
                         </button>
                     </form>
 

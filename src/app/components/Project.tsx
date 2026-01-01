@@ -151,7 +151,6 @@ const Projects: React.FC = () => {
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
                     className="text-center mb-16 space-y-4"
                 >
                     <h2 className="text-3xl md:text-5xl font-black tracking-tighter uppercase text-black dark:text-white/90">
@@ -167,7 +166,6 @@ const Projects: React.FC = () => {
                 <motion.div
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: true, margin: "-100px" }}
                     variants={{
                         visible: {
                             transition: {

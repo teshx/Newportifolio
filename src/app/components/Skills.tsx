@@ -81,7 +81,6 @@ const Skills: React.FC = () => {
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
                 className="mb-10 text-center"
             >
                 <h2 className="text-3xl md:text-5xl font-black tracking-tighter uppercase mb-4 dark:text-white text-zinc-900">Technical Stack</h2>
@@ -100,7 +99,6 @@ const Skills: React.FC = () => {
                 <motion.div
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: true }}
                     variants={{
                         visible: {
                             transition: {
