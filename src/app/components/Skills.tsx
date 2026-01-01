@@ -1,6 +1,7 @@
 "use client";
 
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const Crosshair: React.FC<{ position: string }> = ({ position }) => (
     <div className={`absolute ${position} w-3 h-3 flex items-center justify-center pointer-events-none opacity-40 z-20`}>
@@ -13,15 +14,17 @@ interface Tech {
     icon: React.ReactNode;
     label: string;
     color: string;
-
-
 }
 
 const TechIcon: React.FC<{ tech: Tech }> = ({ tech }) => {
     const [isHovered, setIsHovered] = React.useState(false);
 
     return (
-        <div
+        <motion.div
+            variants={{
+                hidden: { opacity: 0, scale: 0.5 },
+                visible: { opacity: 1, scale: 1 }
+            }}
             className="group relative flex items-center justify-center transition-all duration-300 hover:scale-125 cursor-default hover:z-50"
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
@@ -35,8 +38,6 @@ const TechIcon: React.FC<{ tech: Tech }> = ({ tech }) => {
                 </div>
             </div>
 
-
-
             {/* Label Tooltip */}
             <div className="absolute -top-12 left-1/2 -translate-x-1/2 pointer-events-none transition-all duration-300 opacity-0 group-hover:opacity-100 group-hover:-top-10">
                 <div className="px-3 py-1.5 dark:bg-white/10 bg-black/10 backdrop-blur-md border dark:border-white/10 border-black/10 rounded-lg text-[10px] font-mono tracking-widest uppercase whitespace-nowrap dark:text-white text-black shadow-2xl">
@@ -44,7 +45,7 @@ const TechIcon: React.FC<{ tech: Tech }> = ({ tech }) => {
                 </div>
                 <div className="w-0 h-0 border-l-[4px] border-l-transparent border-r-[4px] border-r-transparent border-t-[4px] dark:border-t-white/10 border-t-black/10 mx-auto"></div>
             </div>
-        </div>
+        </motion.div>
     );
 };
 
@@ -77,10 +78,15 @@ const Skills: React.FC = () => {
     return (
         <section id="skill" className="py-32 px-[5vw] md:px-[10vw] flex flex-col items-center">
             {/* Title Header */}
-            <div className="mb-10 text-center">
+            <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="mb-10 text-center"
+            >
                 <h2 className="text-3xl md:text-5xl font-black tracking-tighter uppercase mb-4 dark:text-white text-zinc-900">Technical Stack</h2>
                 <div className="w-20 h-1.5 dark:bg-white/20 bg-black/20 mx-auto"></div>
-            </div>
+            </motion.div>
 
             {/* Main Square Container */}
             <div className="relative border border-black/5 dark:border-white/5 bg-black/[0.02] dark:bg-white/[0.01] backdrop-blur-sm p-8 md:p-12 flex flex-col items-center rounded-3xl max-w-7xl w-full">
@@ -91,11 +97,23 @@ const Skills: React.FC = () => {
                 <Crosshair position="-bottom-1.5 -right-1.5" />
 
                 {/* Grid */}
-                <div className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-10 xl:grid-cols-12 gap-4 md:gap-6">
+                <motion.div
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                    variants={{
+                        visible: {
+                            transition: {
+                                staggerChildren: 0.05
+                            }
+                        }
+                    }}
+                    className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-10 xl:grid-cols-12 gap-4 md:gap-6"
+                >
                     {techStack.map((tech, idx) => (
                         <TechIcon key={idx} tech={tech} />
                     ))}
-                </div>
+                </motion.div>
             </div>
         </section>
     );
