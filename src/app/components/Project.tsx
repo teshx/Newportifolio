@@ -1,5 +1,7 @@
+"use client";
 
 import React from 'react';
+import { motion } from 'framer-motion';
 
 interface ProjectItem {
     id: string;
@@ -13,13 +15,22 @@ interface ProjectItem {
 
 const ProjectCard: React.FC<{ project: ProjectItem }> = ({ project }) => {
     return (
-        <div className="group flex flex-col h-full overflow-hidden rounded-sm bg-white dark:bg-[#161616] border border-black/5 dark:border-white/5 transition-all duration-300 hover:border-black/20 dark:hover:border-white/20 hover:shadow-xl dark:hover:shadow-none">
+        <motion.div
+            variants={{
+                hidden: { opacity: 0, y: 30 },
+                visible: { opacity: 1, y: 0 }
+            }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="group flex flex-col h-full overflow-hidden rounded-sm bg-white dark:bg-[#161616] border border-black/5 dark:border-white/5 transition-all duration-300 hover:border-black/20 dark:hover:border-white/20 hover:shadow-xl dark:hover:shadow-none"
+        >
             {/* Top Image */}
             <div className="relative aspect-video overflow-hidden border-b border-black/5 dark:border-white/5">
-                <img
+                <motion.img
                     src={project.imageUrl}
                     alt={project.title}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    className="w-full h-full object-cover"
+                    whileHover={{ scale: 1.05 }}
+                    transition={{ duration: 0.5 }}
                 />
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 dark:group-hover:bg-transparent transition-colors"></div>
             </div>
@@ -49,25 +60,29 @@ const ProjectCard: React.FC<{ project: ProjectItem }> = ({ project }) => {
 
                 {/* Action Buttons */}
                 <div className="mt-auto flex items-center gap-3">
-                    <a
+                    <motion.a
                         href={project.liveUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex-1 inline-flex items-center justify-center px-4 py-2.5 bg-black dark:bg-[#d1d5db] hover:bg-zinc-800 dark:hover:bg-white text-white dark:text-black text-xs font-black uppercase tracking-widest rounded-sm transition-all transform active:scale-95 shadow-lg"
+                        whileHover={{ scale: 1.02 }}
+                        whileTap={{ scale: 0.98 }}
+                        className="flex-1 inline-flex items-center justify-center px-4 py-2.5 bg-black dark:bg-[#d1d5db] hover:bg-zinc-800 dark:hover:bg-white text-white dark:text-black text-xs font-black uppercase tracking-widest rounded-sm transition-all shadow-lg"
                     >
                         Site <i className="fas fa-external-link-alt ml-2 text-[10px]"></i>
-                    </a>
-                    <a
+                    </motion.a>
+                    <motion.a
                         href={project.githubUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex-1 inline-flex items-center justify-center px-4 py-2.5 border border-black/10 dark:border-white/10 hover:border-black/30 dark:hover:border-white/30 hover:bg-black/5 dark:hover:bg-white/5 text-black dark:text-white text-xs font-black uppercase tracking-widest rounded-sm transition-all transform active:scale-95"
+                        whileHover={{ scale: 1.02 }}
+                        whileTap={{ scale: 0.98 }}
+                        className="flex-1 inline-flex items-center justify-center px-4 py-2.5 border border-black/10 dark:border-white/10 hover:border-black/30 dark:hover:border-white/30 hover:bg-black/5 dark:hover:bg-white/5 text-black dark:text-white text-xs font-black uppercase tracking-widest rounded-sm transition-all"
                     >
                         Github <i className="fab fa-github ml-2 text-sm"></i>
-                    </a>
+                    </motion.a>
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 };
 
@@ -133,7 +148,12 @@ const Projects: React.FC = () => {
         <section id="project" className="py-24 px-[10vw] lg:px-[15vw] bg-transparent border-t border-black/5 dark:border-white/5">
             <div className="max-w-7xl mx-auto">
                 {/* Section Header */}
-                <div className="text-center mb-16 space-y-4">
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className="text-center mb-16 space-y-4"
+                >
                     <h2 className="text-3xl md:text-5xl font-black tracking-tighter uppercase text-black dark:text-white/90">
                         Selected Works
                     </h2>
@@ -141,17 +161,29 @@ const Projects: React.FC = () => {
                         <i className="fas fa-cube text-[#2ecc71]"></i>
                         <span>Engineering solutions for complex <span className="text-black/60 dark:text-white/60">Digital Ecosystems</span></span>
                     </div>
-                </div>
+                </motion.div>
 
                 {/* Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+                <motion.div
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, margin: "-100px" }}
+                    variants={{
+                        visible: {
+                            transition: {
+                                staggerChildren: 0.1
+                            }
+                        }
+                    }}
+                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10"
+                >
                     {projects.map((project) => (
                         <ProjectCard
                             key={project.id}
                             project={project}
                         />
                     ))}
-                </div>
+                </motion.div>
 
                 {/* Archive Footer */}
                 <div className="mt-24 flex justify-center">
