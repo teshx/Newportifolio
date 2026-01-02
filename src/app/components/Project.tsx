@@ -107,22 +107,22 @@ const Projects: React.FC = () => {
             tags: ['React']
         },
         {
-            id: 'iphone-clone-1',
-            title: 'iPhone-clone',
-            description: 'This is a project made to learn the latest languages by building an app.',
-            imageUrl: '/iphone-bootstrap-aXG85nJe.png',
+            id: 'skill-swap',
+            title: 'Skill Swap',
+            description: 'A platform for exchanging skills and knowledge between individuals, featuring secure authentication and a modern user interface.',
+            imageUrl: '/skillswap.jpg',
             liveUrl: '#',
-            githubUrl: '#',
-            tags: ['HTML', 'CSS', 'JavaScript', 'Bootstrap']
+            githubUrl: 'https://github.com/ruhamabek/SkillSwap',
+            tags: ['React', 'TypeScript', 'Express', 'MongoDB', 'Better Auth']
         },
         {
-            id: 'iphone-clone-2',
-            title: 'iPhone-clone',
-            description: 'Modern iPhone landing page clone built with React and custom CSS styling.',
-            imageUrl: '/iphone-react-CbF-vJ1U.png',
+            id: 'kidcare',
+            title: 'KidCare',
+            description: 'A dedicated platform connecting parents with professional nannies, tutors, and drivers to ensure children receive the best care and support.',
+            imageUrl: '/kidcare.jpg',
             liveUrl: '#',
-            githubUrl: '#',
-            tags: ['React', 'CSS']
+            githubUrl: 'https://github.com/ruhamabek/colorful-playground-home',
+            tags: ['React', 'TypeScript', 'Express', 'MongoDB']
         },
         {
             id: 'auth-system',
