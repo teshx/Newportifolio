@@ -158,7 +158,7 @@ const Projects: React.FC = () => {
                     </h2>
                     <div className="flex items-center justify-center gap-3 text-black/30 dark:text-white/30 text-[10px] md:text-xs font-mono uppercase tracking-[0.2em]">
                         <i className="fas fa-cube text-[#2ecc71]"></i>
-                        <span>Engineering solutions for complex <span className="text-black/60 dark:text-white/60">Digital Ecosystems</span></span>
+                        {/* <span>Engineering solutions for complex <span className="text-black/60 dark:text-white/60">Digital Ecosystems</span></span> */}
                     </div>
                 </motion.div>
 
